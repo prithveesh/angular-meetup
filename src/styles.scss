@@ -5,6 +5,12 @@ table {
     td, th {
         padding: 8px;
     }
+    &.detail-table {
+        tr td:first-child {
+            font-weight: bold;
+            width: 15%;
+        }
+    }
 }
 
 .main-container {
