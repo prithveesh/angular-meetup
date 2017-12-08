@@ -1,13 +1,21 @@
-<h1>
-  {{title}}
-</h1>
-<nav>
-  
-  <a routerLink="/search" routerLinkActive="active">Search</a>
-  <a routerLink="/films" routerLinkActive="active">Films</a>
-  <a routerLink="/people" routerLinkActive="active">People</a>
-  <a routerLink="/vehicles" routerLinkActive="active">Vehicles</a>
-  <a routerLink="/species" routerLinkActive="active">Species</a>
-  <a routerLink="/starships" routerLinkActive="active">Starships</a>
-</nav>
-<router-outlet></router-outlet>
+<main class="container-fluid">
+  <h1 class="display-4">
+    {{title}}
+  </h1>
+
+  <nav class="navbar">
+    <div class="nav nav-pills">
+      <a routerLink="/search" routerLinkActive="active" class="nav-link">Search</a>
+      <a routerLink="/films" routerLinkActive="active" class="nav-link">Films</a>
+      <a routerLink="/people" routerLinkActive="active" class="nav-link">People</a>
+      <a routerLink="/vehicles" routerLinkActive="active" class="nav-link">Vehicles</a>
+      <a routerLink="/species" routerLinkActive="active" class="nav-link">Species</a>
+      <a routerLink="/starships" routerLinkActive="active" class="nav-link">Starships</a>
+    </div>
+  </nav>
+  <section class="row">
+    <div class="col-12">
+        <router-outlet></router-outlet>
+    </div>
+  </section>
+</main>

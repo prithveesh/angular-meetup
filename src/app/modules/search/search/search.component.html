@@ -1,6 +1,9 @@
-<input [(ngModel)]="searchField" />
-<button (click)="search()">Search</button>
-
+<form class="form-inline">
+  <div class="form-group">
+    <input [(ngModel)]="searchField" type="text" class="form-control" name="searchField"/>
+  </div>
+  <button (click)="search()" class="btn btn-primary">Search</button>
+</form>
 <ul>
   <li *ngFor="let item of searchList">
     <a [href]="item && item.url" (click)="openDetail($event, item)">{{item.name}}</a>
