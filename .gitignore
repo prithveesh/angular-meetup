@@ -1,0 +1,21 @@
+.project
+.classpath
+/.apt_generated/
+/target/
+/.factorypath
+/.settings
+*.iml
+
+/node/
+/node_modules/
+/logs/
+.idea/
+.DS_Store
+dist/
+/src/main/resources/static/
+/src/main/webapp/script-partial.html
+/src/main/webapp/style-partial.html
+
+#Package lock to be upgraded only if required or at intervals
+package-lock.json
+/package-lock.json

@@ -1,0 +1,21 @@
+
+<table>
+  <thead>
+    <tr>
+      <th (click)="changeSorting('name')">Name</th>
+      <th (click)="changeSorting('model')">Model</th>
+      <th (click)="changeSorting('manufacturer')">Manufacturer</th>
+      <th (click)="changeSorting('starship_class')">Starship Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rec of (list | sort: sortCriteria)">
+      <td>{{rec.name}}</td>
+      <td>{{rec.model}}</td>
+      <td>{{rec.manufacturer}}</td>
+      <td>{{rec.starship_class}}</td>
+    </tr>
+  </tbody>
+</table>
+<a href="javascript:void(0)" *ngIf="previousLink" (click)="previous($event)">Previous 10</a>
+<a href="javascript:void(0)" *ngIf="nextLink" (click)="next($event)">Next 10</a>
