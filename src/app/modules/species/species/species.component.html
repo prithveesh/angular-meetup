@@ -1,21 +1,22 @@
-
-<table class="table-striped">
-  <thead>
-    <tr>
-      <th (click)="changeSorting('name')">Name</th>
-      <th (click)="changeSorting('average_height')">Height</th>
-      <th (click)="changeSorting('designation')">Designation</th>
-      <th (click)="changeSorting('classification')">Classification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let rec of (list | sort: sortCriteria)">
-      <td>{{rec.name}}</td>
-      <td>{{rec.average_height}}</td>
-      <td>{{rec.designation}}</td>
-      <td>{{rec.classification}}</td>
-    </tr>
-  </tbody>
-</table>
-<a href="javascript:void(0)" *ngIf="previousLink" (click)="previous($event)">Previous 10</a>
-<a href="javascript:void(0)" *ngIf="nextLink" (click)="next($event)">Next 10</a>
+<div class="d-inline-block">
+  <table class="table-striped">
+    <thead>
+      <tr>
+        <th (click)="changeSorting('name')">Name</th>
+        <th (click)="changeSorting('average_height')">Height</th>
+        <th (click)="changeSorting('designation')">Designation</th>
+        <th (click)="changeSorting('classification')">Classification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rec of (list | sort: sortCriteria)">
+        <td>{{rec.name}}</td>
+        <td>{{rec.average_height}}</td>
+        <td>{{rec.designation}}</td>
+        <td>{{rec.classification}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="javascript:void(0)" *ngIf="previousLink" (click)="previous($event)" class="float-left">Previous 10</a>
+  <a href="javascript:void(0)" *ngIf="nextLink" (click)="next($event)" class="float-right">Next 10</a>
+</div>

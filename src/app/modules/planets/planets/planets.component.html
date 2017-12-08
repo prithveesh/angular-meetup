@@ -1,21 +1,22 @@
-
-<table class="table-striped">
-  <thead>
-    <tr>
-      <th (click)="changeSorting('title')">Title</th>
-      <th (click)="changeSorting('release_date')">Release Date</th>
-      <th (click)="changeSorting('director')">Director</th>
-      <th (click)="changeSorting('producer')">Producer</th>
-      <th (click)="changeSorting('opening_crawl')">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let rec of (list | sort: sortCriteria)">
-      <td>{{rec.title}}</td>
-      <td>{{rec.release_date | date:'shortDate'}}</td>
-      <td>{{rec.director}}</td>
-      <td>{{rec.producer}}</td>
-      <td>{{rec.opening_crawl}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="d-inline-block">
+  <table class="table-striped">
+    <thead>
+      <tr>
+        <th (click)="changeSorting('title')">Title</th>
+        <th (click)="changeSorting('release_date')">Release Date</th>
+        <th (click)="changeSorting('director')">Director</th>
+        <th (click)="changeSorting('producer')">Producer</th>
+        <th (click)="changeSorting('opening_crawl')">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rec of (list | sort: sortCriteria)">
+        <td>{{rec.title}}</td>
+        <td>{{rec.release_date | date:'shortDate'}}</td>
+        <td>{{rec.director}}</td>
+        <td>{{rec.producer}}</td>
+        <td>{{rec.opening_crawl}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
