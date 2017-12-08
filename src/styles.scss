@@ -1,13 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 table {
-    border: 1px solid black;
-    margin: 20px;
-    th {
-        cursor: pointer;
-    }
-    td {
-        border: 1px solid black;
-        margin: 5px;
+    td, th {
+        padding: 8px;
     }
 }
