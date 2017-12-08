@@ -1,10 +1,10 @@
 <form class="form-inline">
   <div class="form-group">
-    <input [(ngModel)]="searchField" type="text" class="form-control" name="searchField"/>
+    <input [(ngModel)]="searchField" type="text" class="form-control mr-3" name="searchField"/>
   </div>
   <button (click)="search()" class="btn btn-primary">Search</button>
 </form>
-<ul>
+<ul class="list-unstyled my-3 ml-1">
   <li *ngFor="let item of searchList">
     <a [href]="item && item.url" (click)="openDetail($event, item)">{{item.name}}</a>
   </li>
