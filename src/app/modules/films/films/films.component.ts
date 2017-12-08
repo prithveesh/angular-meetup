@@ -1,6 +1,7 @@
 import { PRIVACY_PRIVATE } from 'tslint/lib/rules/completedDocsRule';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'sw-films',
   templateUrl: './films.component.html',
@@ -14,12 +15,14 @@ export class FilmsComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.list = data.data.results;
+      this.list = data.data.results.map(item => {
+        item.url = item.url.replace('https://swapi.co/api/', '');
+        return item;
+      });
     });
   }
 
   changeSorting(param) {
     this.sortCriteria = param;
   }
-
 }

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FilmsRoutingModule } from './films-routing.module';
 import { FilmsComponent } from './films/films.component';
 import { SharedModule } from '../../shared';
+import { DetailsComponent } from './details/details.component';
+import { ResolveDataService } from './details/resolve-data.service';
 
 @NgModule({
   imports: [
@@ -10,6 +12,7 @@ import { SharedModule } from '../../shared';
     FilmsRoutingModule,
     SharedModule
   ],
-  declarations: [FilmsComponent]
+  declarations: [FilmsComponent, DetailsComponent],
+  providers: [ResolveDataService]
 })
 export class FilmsModule { }

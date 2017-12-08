@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let rec of (list | sort: sortCriteria)">
-      <td>{{rec.title}}</td>
+      <td><a [routerLink]="'../' + rec.url">{{rec.title}}</a></td>
       <td>{{rec.release_date | date:'shortDate'}}</td>
       <td>{{rec.director}}</td>
       <td>{{rec.producer}}</td>
