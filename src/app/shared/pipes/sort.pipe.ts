@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SortPipe implements PipeTransform {
   transform(array: Array<string>, param: string): Array<string> {
-    console.log(param);
     array.sort((a: any, b: any) => {
       if (a.param < b.param) {
         return -1;

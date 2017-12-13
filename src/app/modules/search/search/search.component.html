@@ -2,7 +2,7 @@
   <div class="form-group">
     <input [(ngModel)]="searchField" type="text" class="form-control mr-3" name="searchField"/>
   </div>
-  <button (click)="search()" class="btn btn-primary">Search</button>
+  <button (click)="search()" type="submit" class="btn btn-primary">Search</button>
 </form>
 <ul class="list-unstyled my-3 ml-1">
   <li *ngFor="let item of searchList">

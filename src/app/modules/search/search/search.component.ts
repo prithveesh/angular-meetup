@@ -2,8 +2,9 @@ import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operator/map';
 import { combineLatest } from 'rxjs/observable/combineLatest';
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../../../core/services/http.service';
-import { URLS } from '../../../core/constants/urls';
+import { HttpService } from '@app/core';
+import { URLS } from '@app/core';
+
 
 @Component({
   selector: 'sw-search',

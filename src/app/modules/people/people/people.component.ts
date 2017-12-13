@@ -2,7 +2,7 @@ import { ParsedPath } from 'path';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpService } from '../../../core/services/http.service';
+import { HttpService } from '@app/core';
 
 @Component({
   selector: 'sw-people',

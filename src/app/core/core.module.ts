@@ -1,12 +1,14 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpService } from './services/http.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [],
-  providers: [ HttpService ]
+  providers: [HttpService]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

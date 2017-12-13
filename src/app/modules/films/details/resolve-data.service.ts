@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { HttpService, URLS } from '../../../core';
+import { HttpService, URLS } from '@app/core';
 
 @Injectable()
 export class ResolveDataService implements Resolve<any> {

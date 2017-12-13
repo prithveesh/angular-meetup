@@ -1,29 +1,30 @@
 {
   "index": "/index.html",
   "assetGroups": [{
-    "name": "app",
-    "installMode": "prefetch",
-    "resources": {
-      "files": [
-        "/index.html"
-      ],
-      "versionedFiles": [
-        "/*.bundle.css",
-        "/*.bundle.js",
-        "/*.chunk.js"
-      ]
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/index.html"
+        ],
+        "versionedFiles": [
+          "/*.bundle.css",
+          "/*.bundle.js",
+          "/*.chunk.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**"
+        ]
+      }
     }
-  }, 
-  {
-    "name": "assets",
-    "installMode": "lazy",
-    "updateMode": "prefetch",
-    "resources": {
-      "files": [
-        "/assets/**"
-      ]
-    }
-  }],
+  ],
   "dataGroups": [{
     "name": "api-freshness",
     "urls": [
@@ -38,12 +39,12 @@
   }, {
     "name": "api-performance",
     "urls": [
-        "https://swapi.co/api/films/",
-        "https://swapi.co/api/people/",
-        "https://swapi.co/api/planets/",
-        "https://swapi.co/api/species/",
-        "https://swapi.co/api/starships/",
-        "https://swapi.co/api/vehicles/"
+      "https://swapi.co/api/films/",
+      "https://swapi.co/api/people/",
+      "https://swapi.co/api/planets/",
+      "https://swapi.co/api/species/",
+      "https://swapi.co/api/starships/",
+      "https://swapi.co/api/vehicles/"
     ],
     "cacheConfig": {
       "maxSize": 100,
